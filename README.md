@@ -1,11 +1,16 @@
 # cpp-telegram-lib
 Small library to send messages to Telegram from any C/C++ microcontroller e.g. esp8266
 
-Telegram tg("6536508266:AAE1ktOcXhC2SyCA5jNi---your-data", "162--chatId");
-tg.setLogger(loggerCallback); // optional
-tg.setClient(send);           // any way to send http
-tg.sendMessage("hello");
-
+```
+void loop()
+{
+//...
+    Telegram tg("6536508266:AAE1ktOcXhC2SyCA5jNi---your-data", "162--chatId");
+    tg.setLogger(loggerCallback); // optional
+    tg.setClient(send);           // any way to send http
+    tg.sendMessage("hello");
+//...
+}
 void loggerCallback(const char * m) {
     Serial.print("LOGGER: ");
     Serial.println(m);
@@ -14,6 +19,7 @@ void loggerCallback(const char * m) {
 void send(const char data[]) {
     //any way to run a get request to url in data[]
 }
+```
 
 # how to get required params to access the bot: 
 Post one message from User to the Bot.
