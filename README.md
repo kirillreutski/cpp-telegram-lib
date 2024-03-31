@@ -22,8 +22,9 @@ void send(const char data[]) {
 ```
 
 # how to get required params to access the bot: 
-Post one message from User to the Bot.
-Open https://api.telegram.org/bot/getUpdates page.
-Find this message and navigate to the result->message->chat->id key.
-Use this ID as the [chat_id] parameter to send personal messages to the User.
-https://core.telegram.org/bots/api#available-methods
+1. Post one message from User to the Bot.
+2. Open https://api.telegram.org/bot/getUpdates page.
+3. Find this message and navigate to the result->message->chat->id key.
+4. Use this ID as the [chat_id] parameter to send personal messages to the User.
+
+More: https://core.telegram.org/bots/api#available-methods
